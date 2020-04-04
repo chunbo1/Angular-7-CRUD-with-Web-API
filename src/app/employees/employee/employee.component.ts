@@ -29,7 +29,9 @@ export class EmployeeComponent implements OnInit {
     }
   }
 
-
+log(x) {
+  console.log(x);
+}
   onSubmit(form: NgForm) {
     if (form.value.EmployeeID == null)
       this.insertRecord(form);

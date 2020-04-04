@@ -2,8 +2,8 @@
   <input type="hidden" name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="service.formData.EmployeeID">
   <div class="form-group">
     <label>FULL NAME</label>
-    <input name="FullName" #FullName="ngModel" [(ngModel)]="service.formData.FullName" class="form-control" required>
-    <div class="validation-error" *ngIf="FullName.invalid && FullName.touched">This field is required.</div>
+    <input name="FullName" #FullNameX="ngModel" [(ngModel)]="service.formData.FullName" class="form-control" required (change)="log(FullNameX)">
+    <div class="validation-error" *ngIf="FullNameX.invalid && FullNameX.touched">This field is required.</div>
   </div>
   <div class="form-group">
     <label>POSITION</label>

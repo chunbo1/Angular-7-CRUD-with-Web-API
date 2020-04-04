@@ -10,13 +10,20 @@ import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 import { EmployeeService } from './shared/employee.service';
+import { TeachersComponent } from './teachers/teachers.component';
+import { TeacherComponent } from './teachers/teacher/teacher.component';
+import { TeacherListComponent } from './teachers/teacher-list/teacher-list.component';
+import { TeacherService } from './shared/teacher.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
     EmployeeComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    TeachersComponent,
+    TeacherComponent,
+    TeacherListComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +32,7 @@ import { EmployeeService } from './shared/employee.service';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, TeacherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
